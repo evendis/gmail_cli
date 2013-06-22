@@ -11,6 +11,7 @@ namespace :gmail_cli do
       application_name: ENV['application_name'],
       application_version: ENV['application_version']
     }
+    GmailCli::Logger.set_log_mode(t.application.options.trace)
     GmailCli::Oauth2Helper.authorize!(options)
   end
 

@@ -7,9 +7,7 @@ require 'getoptions'
 begin
   options = GetOptions.new(GmailCli::Shell::OPTIONS)
   GmailCli::Shell.new(options,ARGV).run
-rescue Interrupt
-  $stderr.puts "..interrupted."
-rescue => e
+rescue Exception => e
   $stderr.puts "That wasn't meant to happen! #{e.message}"
   GmailCli::Shell.usage
 end

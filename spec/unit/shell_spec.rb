@@ -19,4 +19,13 @@ describe GmailCli::Shell do
     end
   end
 
+  describe "#authorize" do
+    let(:options) { [] }
+    let(:argv) { ["authorize"] }
+    it "should invoke authorize when run" do
+      GmailCli::Oauth2Helper.should_receive(:authorize!)
+      shell.run
+    end
+  end
+
 end

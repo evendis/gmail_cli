@@ -1,6 +1,7 @@
 require "bundler/gem_tasks"
 require 'rspec'
 require 'rspec/core/rake_task'
+require 'gmail_cli/tasks'
 
 desc "Run all test examples"
 RSpec::Core::RakeTask.new do |t|

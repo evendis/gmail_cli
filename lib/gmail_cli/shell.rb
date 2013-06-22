@@ -16,6 +16,7 @@ class GmailCli::Shell
   def initialize(options,args)
     @options = (options||{}).each{|k,v| {k => v} }
     @args = args
+    GmailCli::Logger.set_log_mode(options[:verbose])
   end
 
   # Command: execute the task according to the options provided on initialisation

@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = GmailCli::VERSION
   spec.authors       = ["Paul Gallagher"]
   spec.email         = ["gallagher.paul@gmail.com"]
-  spec.description   = %q{All you need to write utilities that talk to Gmail with OAuth2}
+  spec.description   = %q{A simple toolbox for build utilities that talk to Gmail with OAuth2}
   spec.summary       = %q{GmailCli packages the key tools and adds a sprinkling of goodness to make it just that much easier to write primarily command-line utilities for Gmail/GoogleApps}
   spec.homepage      = "https://github.com/evendis/gmail_cli"
   spec.license       = "MIT"
