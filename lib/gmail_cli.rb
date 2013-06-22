@@ -1,5 +1,4 @@
 require "gmail_cli/version"
+require "gmail_cli/oauth2_helper"
+require "gmail_cli/shell"
 
-module GmailCli
-  # Your code goes here...
-end

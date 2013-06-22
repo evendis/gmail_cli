@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+
+require 'gmail_cli'
+require 'getoptions'
+
+begin
+  options = GetOptions.new(GmailCli::Shell::OPTIONS)
+  GmailCli::Shell.new(options,ARGV).run
+rescue Interrupt
+  $stderr.puts "..interrupted."
+rescue => e
+  $stderr.puts "That wasn't meant to happen! #{e.message}"
+  GmailCli::Shell.usage
+end
+
+
