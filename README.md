@@ -69,15 +69,15 @@ This will prompt you for required information (client_id, client_secret), or you
 
 ### How to get an OAuth2-authorised IMAP connection to Gmail:
 
-  # how you store or set the credentials Hash is up to you, but it should have the following keys:
-  credentials = {
-    client_id:     'xxxx',
-    client_secret: 'yyyy',
-    access_token:  'aaaa',
-    refresh_token: 'rrrr',
-    username:      'name@gmail.com'
-  }
-  imap = GmailCli.imap_connection(credentials)
+    # how you store or set the credentials Hash is up to you, but it should have the following keys:
+    credentials = {
+      client_id:     'xxxx',
+      client_secret: 'yyyy',
+      access_token:  'aaaa',
+      refresh_token: 'rrrr',
+      username:      'name@gmail.com'
+    }
+    imap = GmailCli.imap_connection(credentials)
 
 On return, <tt>imap</tt> will either be an open Net::IMAP connection, or an error will have been raised. Possible exceptions include:
 
