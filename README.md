@@ -1,4 +1,4 @@
-# GmailCli
+# GmailCli [![Build Status](https://secure.travis-ci.org/evendis/gmail_cli.png?branch=master)](http://travis-ci.org/evendis/gmail_cli)
 
 GmailCli packages the key tools and adds a sprinkling of goodness to make it just that much easier
 to write primarily command-line utilities for Gmail/GoogleApps.
@@ -45,35 +45,37 @@ without manual intervention so you don't have to keep going back to step 2 each 
 
 ### How to authorize your OAuth2 credentials - command line approach
 
-  $ gmail_cli authorize
+    $ gmail_cli authorize
 
 This will prompt you for required information (client_id, client_secret), or you can provide on the command line:
 
-  $ gmail_cli authorize --client_id 'my id' --client_secret 'my secret'
+    $ gmail_cli authorize --client_id 'my id' --client_secret 'my secret'
 
 
 ### How to authorize your OAuth2 credentials - Rake approach
 
 In your Rakefile, include the line:
 
-  require 'gmail_cli/tasks'
+    require 'gmail_cli/tasks'
 
 Then from the command line you can:
 
-  $ rake gmail_cli:authorize
+    $ rake gmail_cli:authorize
 
 This will prompt you for required information (client_id, client_secret), or you can provide on the command line:
 
-  $ rake gmail_cli:authorize client_id='my id' client_secret='my secret'
+    $ rake gmail_cli:authorize client_id='my id' client_secret='my secret'
 
 
 ### How to get an OAuth2-authorised IMAP connection to Gmail:
 
   # how you store or set the credentials Hash is up to you, but it should have the following keys:
   credentials = {
-    client_id: 'xxxx',
+    client_id:     'xxxx',
     client_secret: 'yyyy',
-    refresh_token: 'zzzz'
+    access_token:  'aaaa',
+    refresh_token: 'rrrr',
+    username:      'name@gmail.com'
   }
   imap = GmailCli.imap_connection(credentials)
 
