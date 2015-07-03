@@ -7,14 +7,14 @@ describe GmailCli::Shell do
   let(:shell) { GmailCli::Shell.new(getoptions,argv) }
 
   before do
-    $stderr.stub(:puts) # silence console feedback chatter
+    allow($stderr).to receive(:puts) # silence console feedback chatter
   end
 
   describe "#usage" do
     let(:options) { ['-h'] }
     let(:argv) { [] }
-    it "should print usage when run" do
-      shell.should_receive(:usage)
+    it "prints usage when run" do
+      expect(shell).to receive(:usage)
       shell.run
     end
   end
@@ -23,7 +23,7 @@ describe GmailCli::Shell do
     let(:options) { [] }
     let(:argv) { ["authorize"] }
     it "should invoke authorize when run" do
-      GmailCli::Oauth2Helper.should_receive(:authorize!)
+      expect(GmailCli::Oauth2Helper).to receive(:authorize!)
       shell.run
     end
   end

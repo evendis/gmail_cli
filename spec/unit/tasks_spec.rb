@@ -11,8 +11,8 @@ describe "Rake Task gmail_cli:" do
       Rake.application.invoke_task task_name
     end
 
-    it "should run successfully" do
-      GmailCli::Oauth2Helper.any_instance.should_receive(:authorize!).and_return(nil)
+    it "runs successfully" do
+      expect_any_instance_of(GmailCli::Oauth2Helper).to receive(:authorize!).and_return(nil)
       expect { run_rake_task }.to_not raise_error
     end
 
