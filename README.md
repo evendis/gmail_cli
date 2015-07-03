@@ -31,7 +31,7 @@ Or install it yourself as:
 
 There are three basic steps required:
 
-1. Create your API project credntials in the [Google APIs console](https://code.google.com/apis/console/), from the "API Access" tab.
+1. Create your API project credentials in the [Google APIs console](https://code.google.com/apis/console/), from the "API Access" tab.
 
 2. Authorize your credentials to access a specific account.
 This requires human intervention to explicitly make the approval.
