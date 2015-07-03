@@ -18,15 +18,13 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency(%q<getoptions>, ["~> 0.3"])
-  spec.add_runtime_dependency(%q<gmail_xoauth>, ["~> 0.4.1"])
-  spec.add_runtime_dependency(%q<google-api-client>, ["~> 0.6.4"])
+  spec.add_runtime_dependency 'getoptions', "~> 0.3"
+  spec.add_runtime_dependency 'gmail_xoauth', "~> 0.4.1"
+  spec.add_runtime_dependency 'google-api-client', ">= 0.7.0"
 
-  spec.add_development_dependency(%q<bundler>, ["> 1.3"])
-  spec.add_development_dependency(%q<rake>, ["~> 0.9.2.2"])
-  spec.add_development_dependency(%q<rspec>, ["~> 2.13.0"])
-  spec.add_development_dependency(%q<rdoc>, ["~> 3.11"])
-  spec.add_development_dependency(%q<guard-rspec>, ["~> 3.0.2"])
-  spec.add_development_dependency(%q<rb-fsevent>, ["~> 0.9.3"])
+  spec.add_development_dependency "bundler", "~> 1.6"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec", ">= 3.0.0"
+  spec.add_development_dependency "guard-rspec"
 
 end
